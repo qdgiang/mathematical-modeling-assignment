@@ -1,0 +1,192 @@
+\documentclass[a4paper]{article}
+\usepackage{a4wide,amssymb,epsfig,latexsym,multicol,array,hhline,fancyhdr}
+\usepackage{amsmath}
+\usepackage{lastpage}
+\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{graphicx}	\usepackage{chemformula}		
+\usepackage{indentfirst}
+% Standard graphics package
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{textcomp}
+\usepackage{array}
+\usepackage{tabularx, caption}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows,snakes,backgrounds}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true} 
+%\usepackage{pstcol} 								% PSTricks with the standard color package
+
+\newtheorem{theorem}{{\bf Theorem}}
+\newtheorem{property}{{\bf Property}}
+\newtheorem{proposition}{{\bf Proposition}}
+\newtheorem{corollary}[proposition]{{\bf Corollary}}
+\newtheorem{lemma}[proposition]{{\bf Lemma}}
+
+\AtBeginDocument{\renewcommand*\contentsname{Contents}}
+\AtBeginDocument{\renewcommand*\refname{References}}
+%\usepackage{fancyhdr}
+\setlength{\headheight}{40pt}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{
+ \begin{tabular}{rl}
+    \begin{picture}(25,15)(0,0)
+    \put(0,-8){\includegraphics[width=8mm, height=8mm]{Image/hcmut.png}}
+    %\put(0,-8){\epsfig{width=10mm,figure=hcmut.eps}}
+   \end{picture}&
+	%\includegraphics[width=8mm, height=8mm]{hcmut.png} & %
+	\begin{tabular}{l}
+		\textbf{\bf \ttfamily University of Technology, Ho Chi Minh City}\\
+		\textbf{\bf \ttfamily Faculty of Computer Science and Engineering}
+	\end{tabular} 	
+ \end{tabular}
+}
+\fancyhead[R]{
+	\begin{tabular}{l}
+		\tiny \bf \\
+		\tiny \bf 
+	\end{tabular}  }
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L]{\scriptsize \ttfamily Assignment for Mathematical Modelding - Academic year 2020 - 2021}
+\fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+
+%%%
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\makeatletter
+\newcounter {subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection .\@alph\c@subsubsubsection}
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsection{\@dottedtocline{3}{10.0em}{4.1em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+\makeatother
+
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+VIETNAM NATIONAL UNIVERSITY, HO CHI MINH CITY \\
+UNIVERSITY OF TECHNOLOGY \\
+FACULTY OF COMPUTER SCIENCE AND ENGINEERING
+\end{center}
+
+\vspace{1cm}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=3cm]{Image/hcmut.png}
+\end{center}
+\end{figure}
+
+\vspace{1cm}
+
+
+\begin{center}
+\begin{tabular}{c}
+\multicolumn{1}{l}{\textbf{{\Large MATHEMATICAL MODELING (CO2011)}}}\\
+~~\\
+\hline
+\\
+\multicolumn{1}{l}{\textbf{{\Large Assignment}}}\\
+\\
+\textbf{{\Huge Dynamical systems in forecasting}}\\
+\\
+\textbf{{\Huge Greenhouse Micro-climate}}\\
+\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{3cm}
+
+\begin{table}[h]
+\begin{tabular}{rrl}
+\hspace{5 cm} & Advisor: & Nguyen Tien Thinh\\
+& Students: & Ngo Tu Duy - 1752133 (CC01) \\
+& & Truong Van Quang Dat - 1652142 (CC03) \\
+& & Quach Dang Giang - 1952044 (CC02) \\
+& & Hoang Tran Viet Long - 1652350 (CC01)\\
+& & Nguyen Dinh Tuan - 1552411 (CC02)\\
+\end{tabular}
+\end{table}
+
+\begin{center}
+{\footnotesize HO CHI MINH CITY, DECEMBER 2020}
+\end{center}
+\end{titlepage}
+
+
+%\thispagestyle{empty}
+
+\newpage
+\tableofcontents
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Member list \& Workload}
+\input{./Code/Sec1.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exercise 1}
+\input{./Code/Sec2.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exercise 2}
+\input{./Code/Sec3.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exercise 3}
+\input{./Code/Sec5.tex}
+
+\section{Exercise 4}
+\input{./Code/Sec6.tex}
+
+
+\newpage
+\section{Exercise 5}
+\input{./Code/Sec4.tex}
+
+\begin{thebibliography}{80}
+
+
+\bibitem{bib1}
+Bram HE Vanthoor.
+\textit{A model-based greenhouse design method.}
+2011
+
+\bibitem{bib2}
+Vanthoor, C. Stanghellini,  E.J. van Henten and P.H.B. de Visser.
+\textit{A methodology for model-based greenhouse design}
+
+\bibitem{bib3}
+David Katzin, Simon van Mourik, Frank Kempkes, Eldert J. van Henten
+\textit{
+GreenLight - An open source model for
+greenhouses with supplemental lighting:
+Evaluation of heat requirements under LED
+and HPS lamps}
+
+
+\end{thebibliography}
+\end{document}
+
